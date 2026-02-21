@@ -1,15 +1,84 @@
-*.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
+# React Native / Expo
+node_modules/
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+.expo/
+.expo-shared/
+dist/
+build/
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
 .DS_Store
-/build
-/captures
+*.iml
+
+# Android
+.gradle
+/android/local.properties
+/android/captures
+/android/build/
+/android/.cxx/
+/android/.externalNativeBuild
 .externalNativeBuild
 .cxx
 local.properties
+
+# iOS
+/ios/Pods/
+/ios/Podfile.lock
+/ios/build/
+*.xcworkspace
+*.xcodeproj/xcuserdata/
+*.pbxuser
+*.perspectivev3
+*.xcworkspace/xcuserdata/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Dependencies
+node_modules/
+/.pnp
+.pnp.js
+
+# Testing
+/coverage
+
+# Production
+/dist
+.next
+out/
+
+# Misc
+*.pem
+.cache/
+.env*.local
+
+# Temporary files
+tmp/
+temp/
+*.tmp
