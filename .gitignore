@@ -9,7 +9,7 @@ dist/
 build/
 
 # IDEs
-.idea/
+.idea/**
 .vscode/
 *.swp
 *.swo
