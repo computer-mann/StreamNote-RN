@@ -1,84 +1,47 @@
-# React Native / Expo
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+
+# dependencies
 node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Native
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+.metro-health-check*
+
+# debug
 npm-debug.*
 yarn-debug.*
 yarn-error.*
-.expo/
-.expo-shared/
-dist/
-build/
 
-# IDEs
-.idea/**
-.vscode/
-*.swp
-*.swo
-*~
+# macOS
 .DS_Store
-*.iml
-
-# Android
-.gradle
-/android/local.properties
-/android/captures
-/android/build/
-/android/.cxx/
-/android/.externalNativeBuild
-.externalNativeBuild
-.cxx
-local.properties
-
-# iOS
-/ios/Pods/
-/ios/Podfile.lock
-/ios/build/
-*.xcworkspace
-*.xcodeproj/xcuserdata/
-*.pbxuser
-*.perspectivev3
-*.xcworkspace/xcuserdata/
-
-# Environment variables
-.env
-.env.local
-.env.*.local
-
-# OS
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# Logs
-logs/
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-lerna-debug.log*
-
-# Dependencies
-node_modules/
-/.pnp
-.pnp.js
-
-# Testing
-/coverage
-
-# Production
-/dist
-.next
-out/
-
-# Misc
 *.pem
-.cache/
+
+# local env files
 .env*.local
 
-# Temporary files
-tmp/
-temp/
-*.tmp
+# typescript
+*.tsbuildinfo
+
+app-example
+
+# generated native folders
+# Android
+android/app/build/
+android/build/
+
+# iOS
+ios/build/
