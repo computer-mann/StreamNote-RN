@@ -1,35 +1,55 @@
-import { Tabs } from 'expo-router';
-import React from 'react';
+import Ionicons from "@expo/vector-icons/Ionicons";
+import { Tabs } from "expo-router";
+import React, { Component } from "react";
+import { StyleSheet } from "react-native";
 
-import { HapticTab } from '@/components/haptic-tab';
-import { IconSymbol } from '@/components/ui/icon-symbol';
-import { Colors } from '@/constants/theme';
-import { useColorScheme } from '@/hooks/use-color-scheme';
-
-export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
-  return (
-    <Tabs
-      screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
-        tabBarButton: HapticTab,
-      }}>
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+export class MainTabs extends Component {
+  render() {
+    return (
+      <Tabs
+        screenOptions={{
+          headerShown: false,
+          tabBarLabelStyle: styles.tabBarLabelStyle,
         }}
-      />
-      <Tabs.Screen
-        name="explore"
-        options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
-        }}
-      />
-    </Tabs>
-  );
+      >
+        <Tabs.Screen
+          name="new-tracks"
+          options={{
+            title: "New Tracks",
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons name="musical-notes" size={size} color={color} />
+            ),
+          }}
+        />
+        <Tabs.Screen
+          name="albums"
+          options={{
+            title: "Albums",
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons name="albums" size={size} color={color} />
+            ),
+          }}
+        />
+        <Tabs.Screen
+          name="artists"
+          options={{
+            title: "Artists",
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons name="people" size={size} color={color} />
+            ),
+          }}
+        />
+      </Tabs>
+    );
+  }
 }
+
+export default MainTabs;
+
+const styles = StyleSheet.create({
+  tabBarLabelStyle: {
+    fontSize: 16,
+    fontFamily: "Georgia",
+    fontWeight: 300,
+  },
+});
